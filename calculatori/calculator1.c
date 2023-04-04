@@ -7,7 +7,28 @@ void multi (char op);
 void division (char op);
 void power (char op);
 void sqrtFunction (char op);
+void average(char op);
 
+void average (char op)
+{
+    double sum=0,number;
+    double avg;
+    int n=0;
+    printf("Put number to find avg (put -999 to stop)");
+    while (1)
+    {
+        scanf("%lf",&number);
+        if(number==-999)
+        break;
+        else
+          n++;
+          sum+=number;
+
+        
+    }
+    avg=(double )sum/n;
+    printf("Number average: %.1lf",avg);   
+}
 void add(char op)
 {
     double first,second;
@@ -85,7 +106,7 @@ void sqrtFunction(char op )
 int main()
 {
     char op;
-    printf("put operator (+ - * / s ^):  ");
+    printf("put operator (+ - * / s ^ a b):  ");
     scanf("%c",&op);
     add(op );
     sub( op );
